@@ -6,7 +6,7 @@ public class project {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter  a  Sentence: ");
         String str = sc.nextLine();
-        str = str.replace(" ", "");
+        str = str.replaceAll(" ", "");
         char ch;
         int count;
         HashMap<Character, Integer> m = new HashMap<Character, Integer>();
@@ -20,6 +20,7 @@ public class project {
                 m.put(ch, 1);
             }
         }
+        System.out.println("total characters: " + str.length());
         for (Character key : m.keySet()) {
             System.out.println(key + " =" + m.get(key));
         }
