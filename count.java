@@ -58,16 +58,6 @@ public class count {
 
         for (Character key : m.keySet()) {
 
-            // LinkedHashMap preserve the ordering of elements in which they are inserted
-            LinkedHashMap<Character, Integer> reverseSortedMap = new LinkedHashMap<>();
-
-            // Use Comparator.reverseOrder() for reverse ordering
-            m.entrySet()
-                    .stream()
-                    .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                    .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
-
-            System.out.println("Reverse Sorted Map   : " + reverseSortedMap);
             System.out.println(key + " =" + m.get(key));
         }
 
@@ -89,7 +79,4 @@ public class count {
 
     }
 
-    private static Map<Character, Integer> getUnSortedMap() {
-        return null;
-    }
 }
