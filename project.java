@@ -9,23 +9,23 @@ public class project {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter  a  Sentence: ");
         String str = sc.nextLine();
-
+        str = str.replaceAll(" ", "");
         System.out.println("total characters: " + str.length());
         char ch;
         int count;
 
         TreeMap<Character, Integer> m = new TreeMap<Character, Integer>();
 
-        str = str.replaceAll(" ", "");
         for (int i = 0; i < str.length(); i++) {
             ch = str.charAt(i);
-            if (m.containsKey(ch)) {
-                count = m.get(ch);
-                count++;
-                m.replace(ch, count);
-            } else {
-                m.put(ch, 1);
-            }
+            if (!String.valueOf(ch).isBlank())
+                if (m.containsKey(ch)) {
+                    count = m.get(ch);
+                    count++;
+                    m.replace(ch, count);
+                } else {
+                    m.put(ch, 1);
+                }
 
         }
 
