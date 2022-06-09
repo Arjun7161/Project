@@ -46,7 +46,7 @@ public class count {
         System.out.println("Total number of characters = " + cha);
         TreeMap<Character, Integer> m = new TreeMap<Character, Integer>();
         str = str.replaceAll(" ", "");
-        System.out.println("total characters: " + str.length());
+        // System.out.println("total characters: " + str.length());
         for (int i = 0; i < str.length(); i++) {
             ch = str.charAt(i);
             if (!String.valueOf(ch).isBlank())
