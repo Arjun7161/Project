@@ -76,22 +76,6 @@ public class count {
             System.out.println(s.getKey() + "\t" + s.getValue());
         });
 
-        ArrayList<Character> keyList = new ArrayList<Character>(m.keySet());
-
-        // Extract the values from the TreeMap
-        // using TreeMap.values() and
-        // assign them to valueList of type ArrayList
-        ArrayList<Integer> valueList = new ArrayList<Integer>(m.values());
-
-        // printing the keyList
-        // System.out.println(
-        // "List of keys of the given Map : " + keyList);
-
-        // printing the valueList
-        // System.out.println(
-        // "List of values of the given Map : "
-        // + valueList);
-
     }
 
 }
