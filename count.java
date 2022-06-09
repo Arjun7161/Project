@@ -1,5 +1,6 @@
 
 import java.io.*;
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class count {
 
@@ -68,10 +70,10 @@ public class count {
             }
         });
 
-        list.forEach(s -> {
-
-            System.out.println(s.getKey() + "\t" + s.getValue());
-        });
+        List<Entry<Character, Integer>> top10 = list.stream()
+                .limit(10)
+                .collect(Collectors.toList());
+        System.out.println(top10);
 
     }
 
