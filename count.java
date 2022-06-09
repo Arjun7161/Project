@@ -59,10 +59,6 @@ public class count {
 
         }
 
-        for (Character key : m.keySet()) {
-
-            // System.out.println(key + " =" + m.get(key));
-        }
         Set<Entry<Character, Integer>> entrySet = m.entrySet();
         List<Entry<Character, Integer>> list = new ArrayList<>(entrySet);
         Collections.sort(list, new Comparator<Entry<Character, Integer>>() {
@@ -73,6 +69,7 @@ public class count {
         });
 
         list.forEach(s -> {
+
             System.out.println(s.getKey() + "\t" + s.getValue());
         });
 
